@@ -26,8 +26,6 @@ path = 'D:/Users/Fran/Escritorio/G7-SC405/Proyecto/chromedriver.exe'
 try:
     print("Inicia proceso pruebas...")
 
-    
-
     option = webdriver.ChromeOptions()
     option.add_argument('--start-maximized')
     option.add_argument('--disable-extensions')
