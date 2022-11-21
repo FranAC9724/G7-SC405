@@ -13,17 +13,17 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 
-option = webdriver.Edge()
-option.add_argument('--start-maximized')
-option.add_argument('--disable-extensions')
-option.add_experimental_option("detach", True)
+# option = webdriver.Edge()
+# option.add_argument('--start-maximized')
+# option.add_argument('--disable-extensions')
+# option.add_experimental_option("detach", True)
 
-path = "C:\Users\kenji\Documents\GitHub\G7-SC405\msedgedriver.exe"
+path = "C:\\Users\\kenji\\Documents\\GitHub\\G7-SC405\\msedgedriver.exe"
 url = 'https://phptravels.org/register.php'
 try:
     print("Inicia proceso de pruebas")
 
-    driver = webdriver.Edge(path,options=option)
+    driver = webdriver.Edge(path)
     driver.implicitly_wait(3)
     driver.get(url)
 
