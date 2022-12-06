@@ -18,9 +18,9 @@ public class ParallelTesting {
 
     public static void main(String[] args) {
         ChromeTest chrome = new ChromeTest();
-       // MozzilaTest mozzila = new MozzilaTest();
-        //mozzila.start();
-        chrome.start();
+       MozzilaTest mozzila = new MozzilaTest();
+        mozzila.prueba1();
+        //chrome.prueba1();
     }
 
 }

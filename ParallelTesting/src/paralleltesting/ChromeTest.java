@@ -23,8 +23,8 @@ public class ChromeTest extends Thread {
     public ChromeTest() {
     }
 
-    @Override
-    public void run() {
+    
+    public void prueba1() {
         
         String driverPath = "D:\\Users\\Fran\\Escritorio\\G7-SC405\\chromedriver.exe";
         String url = "https://www.opencart.com/index.php?route=account/login";
@@ -43,9 +43,9 @@ public class ChromeTest extends Thread {
             driver.findElement(By.id("input-password")).sendKeys("Y$6q6+HNx#DasbX"); //Clave de ingreso 
             
             driver.findElement(By.xpath("/html/body/div/div[2]/div/div[1]/form/div[3]/div[1]/button[1]")).click();;
-            Thread.sleep(1000);
-            driver.findElement(By.id("input-pin")).sendKeys("9785"); //Pin de acceso
             
+            driver.findElement(By.id("input-pin")).sendKeys("9785"); //Pin de acceso
+            Thread.sleep(60000);
             driver.findElement(By.xpath("/html/body/div/div[2]/div/div[1]/form/div[2]/button")).click();
             
             driver.findElement(By.xpath("/html/body/div/div[2]/div/div[2]/div/div[2]/div[1]/a")).click();
@@ -63,15 +63,15 @@ public class ChromeTest extends Thread {
             
             driver.findElement(By.id("input-link")).sendKeys("https://www.pruebasseleniumg7.com"); //WEB DE PRUEBA NO EXISTE SOLO PARA LLENAR EL CAMPO
             
+            driver.findElement(By.cssSelector("#account-showcase > div > div > div.col-md-9 > form > div > button")).click();
+            
+            driver.findElement(By.cssSelector("#collapse-menu > div:nth-child(1) > div")).click();
             
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException ex) {
                 Logger.getLogger(ChromeTest.class.getName()).log(Level.SEVERE, null, ex);
             }
-            
-            
-            
             
             
         } catch (Exception ex) {
