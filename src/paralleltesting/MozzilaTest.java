@@ -1,6 +1,7 @@
 
 package paralleltesting;
 
+import java.time.Duration;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import org.openqa.selenium.*;
@@ -41,8 +42,12 @@ public class MozzilaTest extends Thread {
             driver.findElement(By.id("input-password")).sendKeys("Y$6q6+HNx#DasbX"); //Clave de ingreso 
 
             driver.findElement(By.xpath("/html/body/div/div[2]/div/div[1]/form/div[3]/div[1]/button[1]")).click();;
-            Thread.sleep(6000);
-            driver.findElement(By.className("form-control")).sendKeys("9785"); //Pin de acceso
+//            Thread.sleep(7000);
+            WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(25));
+            
+            WebElement element= new WebDriverWait(driver,Duration.ofSeconds(30)).until(ExpectedConditions.elementToBeClickable((By.xpath("//*[@id=\"input-pin\"]"))));
+            driver.findElement(By.xpath("//*[@id=\"input-pin\"]")).sendKeys("9785");//Pin de acceso
+
             Thread.sleep(1000);
             driver.findElement(By.xpath("/html/body/div/div[2]/div/div[1]/form/div[2]/button")).click();
             Thread.sleep(1000);
