@@ -4,8 +4,6 @@
  */
 package ProyectoFinal;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author Fran
@@ -13,18 +11,22 @@ import javax.swing.JOptionPane;
 public class Main {
 
     public static void main(String[] args) {
-
-       int menu;
-
-       do{
-           menu = Integer.parseInt(JOptionPane.showInputDialog("Escoja una opcion: "
-                        + "\n1 - Prueba Automatizada 1"
-                        + "\n2 - Prueba Automatizada 2"
-                        + "\n3 - Prueba Automatizada 3"
-                        + "\n4 - Prueba Automatizada 4"
-                        + "\n5- Salir"));
+        
+       Pruebas tests = new Pruebas();
        
-       }while(menu != 5);
+       tests.Prueba1();
+
+//       int menu;
+//
+//       do{
+//           menu = Integer.parseInt(JOptionPane.showInputDialog("Escoja una opcion: "
+//                        + "\n1 - Prueba Automatizada 1"
+//                        + "\n2 - Prueba Automatizada 2"
+//                        + "\n3 - Prueba Automatizada 3"
+//                        + "\n4 - Prueba Automatizada 4"
+//                        + "\n5- Salir"));
+//       
+//       }while(menu != 5);
     
     }
 }
